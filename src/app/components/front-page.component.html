@@ -1,0 +1,67 @@
+<div class="jumbotron">
+    <section class="aboutMe">
+
+        <div class="container">
+            <h3 class="display-3 mb-3 title">About me</h3>
+            <p class="lead mb-4">Hi, I'm Ivan Moreno, a Computer Engineer Student with an interest in back-end and
+                algorithms.
+                I'm just a super
+                curious guy who's been working in some projects with Java/SpringBoot, MySQL and Angular other than
+                school.</p>
+            <p class="lead mb-4">If you are interested in working with me or hiring me, you can contact me through the
+                'contact' section
+                or my social networks.</p>
+        </div>
+
+    </section>
+</div>
+
+<div class="recentProjects">
+
+    <div class="container">
+
+        <h3 class="display-3 mb-3 title" *ngIf="reposWithDescription && reposWithDescription.length>0">{{ tituloRepos }}</h3>
+
+        <div class="table-responsive">
+            <table class="table" *ngIf="reposWithDescription && reposWithDescription.length>0">
+
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Language</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let repo of reposWithDescription">
+                        <td>{{repo.name}}</td>
+                        <td>{{repo.description}}</td>
+                        <td>{{repo.language}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="futureV">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron mt-3">
+                    <h5>Future Ventures (Teach myself in 2021-2022)</h5>
+                    <ul>
+                        <li>AWS or Azure or Google Cloud</li>
+                        <li>Machine Learning/AI</li>
+                        <li>More Algorithms</li>
+                        <li>Testing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

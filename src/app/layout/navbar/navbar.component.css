@@ -1,0 +1,16 @@
+.header .navbar {
+    background-color: transparent !important;
+}
+
+a {
+    color: #fff;
+    font-size: 20px;
+    display: inline-block;
+    margin: 40px 20px;
+    text-decoration: none;
+    position: relative; /* el position es para hacer las animaciones con jquery */
+    font-size: 17px;
+}
+a:hover {
+    text-decoration: underline;
+}
