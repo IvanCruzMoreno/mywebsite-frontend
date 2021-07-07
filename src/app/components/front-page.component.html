@@ -1,93 +1,125 @@
-<div class="jumbotron">
-    <section class="aboutMe">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Moreno</title>
+</head>
+
+<body>
+    <header>
+
+        <app-navbar></app-navbar>
+        
+        <div class="contenedor">
+            <div class="contenedor-texto">
+                <div class="texto">
+                    <h1 class="nombre">Ivan Moreno</h1>
+                    <h2 class="profesion">Computer engineer and self-learning software through research and development.
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="jumbotron">
+        <section class="aboutMe">
+
+            <div class="container">
+                <h3 class="display-3 mb-3 title">About me</h3>
+                <p class="lead mb-4">Hi, I'm Ivan Moreno, a Computer Engineer Student with an interest in back-end and
+                    algorithms.
+                    I'm just a super
+                    curious guy who's been working in some projects with Java/SpringBoot, MySQL and Angular other than
+                    school.</p>
+                <p class="lead mb-4">If you are interested in working with me or hiring me, you can contact me through
+                    the
+                    'contact' section
+                    or my social networks.</p>
+            </div>
+
+        </section>
+    </div>
+
+    <div class="recentProjects">
 
         <div class="container">
-            <h3 class="display-3 mb-3 title">About me</h3>
-            <p class="lead mb-4">Hi, I'm Ivan Moreno, a Computer Engineer Student with an interest in back-end and
-                algorithms.
-                I'm just a super
-                curious guy who's been working in some projects with Java/SpringBoot, MySQL and Angular other than
-                school.</p>
-            <p class="lead mb-4">If you are interested in working with me or hiring me, you can contact me through the
-                'contact' section
-                or my social networks.</p>
-        </div>
 
-    </section>
-</div>
+            <h3 class="display-3 mb-3 title" *ngIf="reposWithDescription && reposWithDescription.length>0">{{
+                tituloRepos }}</h3>
 
-<div class="recentProjects">
+            <div class="table-responsive">
+                <table class="table" *ngIf="reposWithDescription && reposWithDescription.length>0">
 
-    <div class="container">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Language</th>
+                        </tr>
+                    </thead>
 
-        <h3 class="display-3 mb-3 title" *ngIf="reposWithDescription && reposWithDescription.length>0">{{ tituloRepos }}</h3>
+                    <tbody>
+                        <tr *ngFor="let repo of reposWithDescription">
+                            <td>{{repo.name}}</td>
+                            <td>{{repo.description}}</td>
+                            <td>{{repo.language}}</td>
+                        </tr>
+                    </tbody>
 
-        <div class="table-responsive">
-            <table class="table" *ngIf="reposWithDescription && reposWithDescription.length>0">
+                </table>
+            </div>
 
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Language</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr *ngFor="let repo of reposWithDescription">
-                        <td>{{repo.name}}</td>
-                        <td>{{repo.description}}</td>
-                        <td>{{repo.language}}</td>
-                    </tr>
-                </tbody>
-
-            </table>
         </div>
 
     </div>
 
-</div>
-
-<div class="futureV">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="jumbotron mt-3">
-                    <h5>Future Ventures (Teach myself in 2021-2022)</h5>
-                    <ul>
-                        <li>AWS or Azure or Google Cloud</li>
-                        <li>Machine Learning/AI</li>
-                        <li>More Algorithms</li>
-                        <li>Testing</li>
-                    </ul>
+    <div class="futureV">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="jumbotron mt-3">
+                        <h5>Future Ventures (Teach myself in 2021-2022)</h5>
+                        <ul>
+                            <li>AWS or Azure or Google Cloud</li>
+                            <li>Machine Learning/AI</li>
+                            <li>More Algorithms</li>
+                            <li>Testing</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="futureV">
-    <div class="container-fluid h-100">
-        <div class="row w-100 align-items-center">
+    <div class="futureV">
+        <div class="container-fluid h-100">
+            <div class="row w-100 align-items-center">
                 <div class="col text-center">
                     <button type="button" class="btn btn-outline-dark">Repositories</button>
                 </div>
-                
+
                 <div class="col text-center">
                     <button type="button" class="btn btn-outline-dark">Contact Me</button>
                 </div>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="jumbotron">
-    
-    <section class="redes">
-        <h3 class="">Social Networks</h3>
-        <div class="contenedor">
-            <a href="https://www.instagram.com/ivanxxmoreno/"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/carlos-iv%C3%A1n-cruz-moreno-95903a186/"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </section>
+    <div class="jumbotron">
 
-</div>
+        <section class="redes">
+            <h3 class="">Social Networks</h3>
+            <div class="contenedor">
+                <a href="https://www.instagram.com/ivanxxmoreno/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/carlos-iv%C3%A1n-cruz-moreno-95903a186/"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
