@@ -29,6 +29,10 @@
     text-align: left;
 }
 
+.futureV{
+    margin-bottom: 20px;
+}
+
 .futureV .container .row .col .jumbotron h5{
     font-size: 25px;
     line-height: 27px;
@@ -37,8 +41,41 @@
     text-align: left;
 }
 .futureV .container .row .col .jumbotron ul li{
-    font-size: 20px;
+    font-size: 15px;
     line-height: 27px;
     color: #030303;
     text-align: left;
 }
+.container-fluid {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;	
+}
+
+.jumbotron .redes{
+    background: #282929;
+    padding: 60px 0;
+    color: #ffffff;
+}
+
+.jumbotron .redes .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.jumbotron .redes h3{
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-align: center;
+}
+.jumbotron .redes a{
+    text-align: center;
+    width: 100px;
+    display: block;
+    padding: 15px 0;
+    border-radius: 3px;
+    font-size: 30px;
+    margin: 0 0px;
+  }

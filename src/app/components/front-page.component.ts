@@ -12,7 +12,6 @@ export class FrontPageComponent implements OnInit {
   tituloRepos: string = "Recent Projects";
   reposWithDescription: GitHubProject[];
 
-  mostrarColumnasExamenes = ['title', 'description', 'language'];
   constructor(private githubService: GithubService) { }
 
   ngOnInit(): void {
