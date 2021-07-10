@@ -10,13 +10,19 @@ import { GithubService } from '../services/github.service';
 export class FrontPageComponent implements OnInit {
 
   tituloRepos: string = "Recent Projects";
-  reposWithDescription: GitHubProject[];
+  reposWithDescription: GitHubProject[] = [];
 
   constructor(private githubService: GithubService) { }
 
   ngOnInit(): void {
     this.githubService.getAllReposWithDescription().subscribe( reposR => {
-      this.reposWithDescription = reposR;
+      this.reposWithDescription = reposR.map( repoR => {
+        if(repoR.language == null){
+          repoR.language = "Root Project";
+        }
+        return repoR;
+      });
+      
     });
   }
 

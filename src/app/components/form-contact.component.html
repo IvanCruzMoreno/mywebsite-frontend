@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Moreno</title>
+</head>
+
+<body>
+    <header>
+        <app-navbar></app-navbar>
+    </header>
+    
+    <div class="container">
+
+        <div class="row mt-3">
+			<div class="col">
+                
+				<form action="">
+					<div class="form-group mt-2">
+						<label for="name">Name</label>
+						<input type="text" class="form-control" placeholder="name" name="name" id="name" [(ngModel)]="entity.name">
+					</div>
+
+					<div class="form-group mt-2">
+						<label for="email">Email address</label>
+						<input type="email" class="form-control" placeholder="email" name="email" id="email" [(ngModel)]="entity.email">
+					</div>
+
+                    <div class="form-group mt-2">
+						<label for="subject">Subject</label>
+						<input type="subject" class="form-control" placeholder="subject" name="subject" id="subject" [(ngModel)]="entity.subject">
+					</div>
+
+                    <div class="form-group mt-2">
+						<label for="reason">Reason</label>
+						<select name="reason" id="reason" class="form-control" [(ngModel)]="entity.reason">
+                            <option value="sayhi">Just to say Hi</option>
+							<option value="business">Business</option>
+                            <option value="business">Other</option>
+						</select>
+					</div>
+
+					<div class="form-group mt-2">
+						<label for="message">Message</label>
+						<textarea name="message" id="message" class="form-control" [(ngModel)]="entity.message"></textarea>
+					</div>
+
+					<button class="btn btn-dark mt-2" type="submit" (click)="submitEmail()">Submit</button>
+				</form>
+			</div>
+		</div>
+        
+        
+    </div>
+
+</body>
+
+</html>

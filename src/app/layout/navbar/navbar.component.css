@@ -1,11 +1,12 @@
 /* .header {
     position: fixed;
 } */
+
 .header .navbar {
     background-color: transparent !important;
 }
 
-.header .navbar .container a{
+.header .navbar .container a {
     color: #000000;
 }
 
@@ -15,9 +16,22 @@ a {
     display: inline-block;
     margin: 40px 20px;
     text-decoration: none;
-    position: relative; /* el position es para hacer las animaciones con jquery */
+    position: relative;
+    /* el position es para hacer las animaciones con jquery */
     font-size: 17px;
 }
+
 a:hover {
     text-decoration: underline;
 }
+
+
+@media (max-width: 576px) {
+    .navbar {
+        background: red;
+    }
+    .nav-link{
+        padding-top: 0px;
+    }
+}
+
